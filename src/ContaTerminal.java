@@ -25,17 +25,27 @@ Revise sobre concatenação e classe String com método concat
 
 Os campos em [ ] devem ser alterados pelas informações que forem inseridas pelos usuários. */
 public class ContaTerminal {
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Chama o método para ler os dados
-        Dados dados = lerDados(scanner);
+        System.out.print("por favor digite o número da agência: ");
+        String agencia = scanner.nextLine();
 
-        // Chama p método para exibir a mensagem
-        exibirMensagem(dados);
+        System.out.print("por favor digite o número da conta: ");
+        int numero = scanner.nextInt(); 
+        scanner.nextLine(); // Limpar o buffer do scanner
+
+        System.out.print("por favor digite o nome do cliente: ");
+        String nomeCliente = scanner.nextLine();       
+
+        System.out.print("por favor digite o saldo da conta: ");
+        double saldo = scanner.nextDouble();
+
+         System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco. Sua agência é " + agencia + ", conta " + numero + " e seu saldo " + saldo + " já está disponível para saque.");
 
         scanner.close();
-    }
 
- 
+
+    }
 }
